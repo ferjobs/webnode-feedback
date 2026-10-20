@@ -1,0 +1,47 @@
+name: 🐞 Informar de un fallo / Report a bug
+description: Algo no funciona como debería en WebNode. / Something in WebNode doesn't work as it should.
+title: "[Fallo] "
+labels: ["bug"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        ¡Gracias por avisar! Cuanto más concreto, antes se arregla. Puedes arrastrar capturas o vídeos a cualquier campo.
+        Thanks for reporting! The more specific, the sooner it gets fixed. You can drag screenshots or videos into any field.
+  - type: textarea
+    id: description
+    attributes:
+      label: ¿Qué pasó? / What happened?
+      description: Qué hiciste, qué esperabas y qué pasó en su lugar. / What you did, what you expected and what happened instead.
+    validations:
+      required: true
+  - type: textarea
+    id: steps
+    attributes:
+      label: Pasos para repetirlo / Steps to reproduce
+      placeholder: |
+        1. Abrir el proyecto de ejemplo
+        2. …
+  - type: dropdown
+    id: area
+    attributes:
+      label: Zona del editor / Editor area
+      options:
+        - Lienzo de nodos / Node canvas
+        - Propiedades / Inspector
+        - Vista previa / Preview
+        - Código / Code
+        - Motion
+        - Tareas / Tasks
+        - Plan
+        - Paletas / Palettes
+        - Fuentes / Fonts
+        - GitHub
+        - Guardar, abrir, ZIP / Save, open, ZIP
+        - Otra / Other
+  - type: textarea
+    id: environment
+    attributes:
+      label: Información técnica / Technical info
+      description: La rellena WebNode al enviar desde el editor. / Filled in by WebNode when sent from the editor.
+      render: text
