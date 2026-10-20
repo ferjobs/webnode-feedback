@@ -1,0 +1,27 @@
+name: 💡 Sugerir una mejora / Suggest an improvement
+description: Una idea para que WebNode sea mejor. / An idea to make WebNode better.
+title: "[Mejora] "
+labels: ["enhancement"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        ¡Gracias por la idea! / Thanks for the idea!
+  - type: textarea
+    id: description
+    attributes:
+      label: ¿Qué te gustaría? / What would you like?
+      description: Describe la idea y en qué te ayudaría. / Describe the idea and what it would help you with.
+    validations:
+      required: true
+  - type: textarea
+    id: example
+    attributes:
+      label: Ejemplo o referencia / Example or reference
+      description: Otra app que lo haga, un boceto, un enlace… / Another app that does it, a sketch, a link…
+  - type: textarea
+    id: environment
+    attributes:
+      label: Información técnica / Technical info
+      description: La rellena WebNode al enviar desde el editor (opcional). / Filled in by WebNode (optional).
+      render: text
